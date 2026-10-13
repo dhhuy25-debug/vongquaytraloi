@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vòng Xoay May Mắn Lớp Học - Trò Chơi Ôn Tập Vui Nhộn</title>
+    <meta name="description" content="Ứng dụng vòng quay gọi học sinh ngẫu nhiên và câu hỏi ôn tập tương tác cho giáo viên và học sinh Tiểu học." />
+    <meta property="og:title" content="Vòng Xoay May Mắn Lớp Học - Trò Chơi Ôn Tập Vui Nhộn" />
+    <meta property="og:description" content="Ứng dụng vòng quay gọi học sinh ngẫu nhiên và câu hỏi ôn tập tương tác cho giáo viên và học sinh Tiểu học." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <script>
+      // Compatibility shield for browser extensions attempting to monkey-patch window.fetch
+      try {
+        const _origFetch = window.fetch.bind(window);
+        let _customFetch = _origFetch;
+        Object.defineProperty(window, 'fetch', {
+          get: function() { return _customFetch; },
+          set: function(val) { _customFetch = val; },
+          configurable: true,
+          enumerable: true
+        });
+      } catch (e) {
+        // Fallback silent
+      }
+    </script>
+  </head>
+  <body class="bg-[#FFFDF5] text-slate-800 font-['Nunito',sans-serif] selection:bg-amber-300 selection:text-amber-900">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+

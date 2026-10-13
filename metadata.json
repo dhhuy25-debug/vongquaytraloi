@@ -1,0 +1,6 @@
+{
+  "name": "Vòng Xoay May Mắn Lớp Học",
+  "description": "Ứng dụng vòng quay gọi học sinh ngẫu nhiên và câu hỏi ôn tập tương tác cho giáo viên và học sinh Tiểu học.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,115 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Nunito', system-ui, -apple-system, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  h1, h2, h3, h4, .font-heading {
+    font-family: 'Baloo 2', cursive, sans-serif;
+  }
+}
+
+/* Custom festive animations */
+@keyframes floatGentle {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+}
+
+.animate-float {
+  animation: floatGentle 3s ease-in-out infinite;
+}
+
+/* Horse Racing Gallop Animations */
+@keyframes gallopBounce {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  25% { transform: translateY(-3px) rotate(2deg); }
+  50% { transform: translateY(-5px) rotate(-1deg); }
+  75% { transform: translateY(-2px) rotate(1deg); }
+}
+
+@keyframes frontLegCycle {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(-25deg); }
+  50% { transform: rotate(18deg); }
+  75% { transform: rotate(-10deg); }
+}
+
+@keyframes backLegCycle {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(20deg); }
+  50% { transform: rotate(-22deg); }
+  75% { transform: rotate(8deg); }
+}
+
+@keyframes tailFlutter {
+  0%, 100% { transform: rotate(0deg); }
+  50% { transform: rotate(14deg); }
+}
+
+.animate-gallop {
+  animation: gallopBounce 0.28s ease-in-out infinite;
+}
+
+.animate-horse-front-leg {
+  animation: frontLegCycle 0.28s ease-in-out infinite;
+}
+
+.animate-horse-back-leg {
+  animation: backLegCycle 0.28s ease-in-out infinite;
+}
+
+.animate-horse-tail {
+  animation: tailFlutter 0.28s ease-in-out infinite;
+}
+
+/* Smooth custom scrollbars for drawers */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #FEF3C7;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb {
+  background: #F59E0B;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #D97706;
+}
+
+/* Print stylesheet for Certificates */
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  .no-print {
+    display: none !important;
+  }
+  #root, body {
+    background: transparent !important;
+  }
+  /* Show only the certificate */
+  [class*="border-8 border-amber-400"] {
+    visibility: visible !important;
+    position: fixed !important;
+    left: 0 !important;
+    top: 0 !important;
+    width: 100vw !important;
+    height: 100vh !important;
+    margin: 0 !important;
+    box-shadow: none !important;
+    border-width: 6px !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+  [class*="border-8 border-amber-400"] * {
+    visibility: visible !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+}
